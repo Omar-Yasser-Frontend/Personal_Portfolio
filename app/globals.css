@@ -1,26 +1,328 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1e1e1e;
+  --black: #1b1b1b;
+  --secondary-color: #5e0080;
+  scroll-behavior: smooth;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-secondary: var(--secondary-color);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.title {
+  color: transparent;
+  background-image: linear-gradient(to right, white, var(--secondary-color));
+  font-weight: bold;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.bg-anim {
+  position: relative;
+  background-image: linear-gradient(
+    to right,
+    white 0%,
+    white 50%,
+    var(--secondary-color) 50%,
+    var(--secondary-color) 100%
+  );
+  color: transparent;
+  background-size: 200% 100%;
+  background-position:
+    0 0,
+    100% 0;
+  transition: background-position 0.4s;
+}
+
+.bg-anim::after {
+  content: "";
+  background-color: var(--black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: -1;
+  transition-duration: 0.4s;
+}
+
+.bg-anim:hover::after {
+  opacity: 1;
+}
+
+.bg-anim::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  width: 0;
+  transition-duration: 0.4s;
+}
+
+.bg-anim:hover::before {
+  width: 100%;
+}
+
+.bg-anim:hover {
+  background-position:
+    -100% 0,
+    0 0; /* عند الـ hover، تحرك الخلفية الأولى إلى اليسار والخلفية الثانية تأتي من اليمين */
+}
+header nav ul li:not(:last-child, :nth-child(5), :nth-child(6)) a {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+@media (width <= 767px) {
+  header nav ul li:not(:last-child, :nth-child(5), :nth-child(6)) a {
+    justify-content: center;
+  }
+}
+
+.btn-style::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% + -1px);
+  transform: translateY(-50%) scale(1);
+  width: 0;
+  height: calc(100% - 4px);
+  background: var(--black);
+  transition-duration: 300ms;
+
+  @apply rounded-tr-md rounded-br-md;
+}
+
+.btn-style:hover::before {
+  width: calc(50% - 1px);
+}
+
+.btn-style::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(50% + -1px);
+  transform: translateY(-50%) scale(1);
+  width: 0;
+  height: calc(100% - 4px);
+  background: var(--black);
+  transition-duration: 300ms;
+
+  @apply rounded-tl-md rounded-bl-md;
+}
+
+.btn-style:hover::after {
+  width: calc(50% - 1px);
+}
+
+.img-holder::before {
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 500px;
+  height: 800px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -22;
+  background-color: var(--secondary-color);
+}
+
+/* ________________________________________ */
+
+.btn-secondary::before {
+  content: "";
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 50%;
+  height: calc(100% - 0px);
+  background: var(--secondary-color);
+  transition-duration: 300ms;
+
+  /* @apply rounded-tl-md rounded-bl-md; */
+}
+
+.btn-secondary:hover::before {
+  top: 0;
+}
+
+.btn-secondary::after {
+  content: "";
+  position: absolute;
+  bottom: 105%;
+  right: 0;
+  width: 50%;
+  height: calc(100% - 0px);
+  background: var(--secondary-color);
+  transition-duration: 300ms;
+
+  /* @apply rounded-tr-md rounded-br-md; */
+}
+
+.btn-secondary:hover::after {
+  bottom: 0;
+}
+/* _______________________________________________ */
+
+.text-drop-parent span span {
+  display: block;
+  transform: translateY(40px) rotate(360deg);
+  transition-duration: 300ms;
+}
+
+.text-drop-parent:hover span span {
+  transform: translateY(0) rotate(0deg);
+}
+
+.mask-layer {
+  mask-image: radial-gradient(circle at center, black 49%, transparent 50%);
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 49%,
+    transparent 50%
+  );
+}
+
+.hero-img {
+  animation: profile-bounce 10s infinite;
+}
+
+@keyframes profile-bounce {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@media (width <= 375px) {
+  .hero-img {
+    height: 120vw;
+  }
+}
+
+@media (width <= 480px) {
+  .about-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding-inline: 16px;
+    & img {
+      width: 100%;
+      margin: 0;
+      margin-top: 16px;
+    }
+    &:last-child {
+      flex-direction: column;
+      & img {
+        margin: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.content-head {
+  position: relative;
+
+  @apply mb-8 text-center text-3xl font-bold;
+}
+
+.content-head::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5px;
+  background-color: #fff;
+  width: 130px;
+}
+.content-head::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  background-color: var(--background);
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+/* .contacttt {
+  position: relative;
+  overflow: hidden;
+  color: var(--secondary-color);
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  transition: all 0.4s ease;
+}
+
+.contacttt::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.contacttt:hover::after {
+  width: 100%;
+  left: 0;
+} */
+
+/* .contact::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -50%;
+  width: calc(50% - 2px);
+  height: calc(100% - 4px);
+  background: var(--black);
+  transition-duration: 300ms;
+
+  @apply rounded-tl-md rounded-bl-md;
+}
+
+.contact:hover::before {
+  left: 2px;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -50%;
+  width: calc(50% - 2px);
+  height: calc(100% - 4px);
+  background: var(--black);
+  transition-duration: 300ms;
+
+  @apply rounded-tr-md rounded-br-md;
+}
+
+.contact:hover::after {
+  right: 2px;
+} */
