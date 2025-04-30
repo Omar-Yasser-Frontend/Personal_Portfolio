@@ -1,6 +1,6 @@
 # My Personal Portfolio
 
-(./public/screenshot.png)
+[(./public/screenshot.png)]
 
 # overview
 
