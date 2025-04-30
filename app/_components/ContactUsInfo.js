@@ -1,11 +1,4 @@
-import {
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaLinkedin,
-  FaGithub,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 
 function ContactUsInfo() {
   return (

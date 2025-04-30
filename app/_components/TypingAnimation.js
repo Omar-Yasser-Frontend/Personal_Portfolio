@@ -8,12 +8,9 @@ function TypingAnimation({ typingPhrases }) {
       loop={false}
       cursor
       cursorStyle="|"
-      //   cursorBlinking={false}
       typeSpeed={70}
       deleteSpeed={50}
       delaySpeed={1000}
-      //   onLoopDone={handleDone}
-      //   onType={handleType}
     />
   );
 }

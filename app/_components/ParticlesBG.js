@@ -2,21 +2,14 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadFull } from "tsparticles"; // مهم جدًا!
+import { loadFull } from "tsparticles";
 
 export default function ParticlesBG({ className }) {
   const [init, setInit] = useState(false);
 
-  // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
       await loadFull(engine);
-      //   await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
@@ -30,7 +23,7 @@ export default function ParticlesBG({ className }) {
     () => ({
       fullScreen: {
         enable: false,
-        zIndex: 0, // كمان تحط zIndex هنا عشان ميغطيش على المحتوى
+        zIndex: 0,
       },
       background: {
         color: {
@@ -66,7 +59,6 @@ export default function ParticlesBG({ className }) {
           outModes: {
             default: "bounce",
           },
-          //   random: false,
           speed: 2,
         },
         number: {
@@ -82,7 +74,6 @@ export default function ParticlesBG({ className }) {
           value: { min: 1, max: 5 },
         },
       },
-      //   detectRetina: true,
     }),
 
     [],

@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion, PresenceContext } from "motion/react";
+import { motion } from "motion/react";
 import { GrMenu } from "react-icons/gr";
-import ContactModal from "./ContactModal";
 import ContactModalHandler from "./ContactModalHandler";
 
 function Navigation() {

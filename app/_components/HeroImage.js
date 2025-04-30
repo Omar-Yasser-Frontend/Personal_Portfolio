@@ -9,6 +9,7 @@ function HeroImage() {
           src={profilePic}
           priority
           alt="profile"
+          quality={80}
           className="hero-img relative -mb-18 h-[500px] w-[500px] max-w-full -translate-y-16 object-cover object-center"
         />
       </div>

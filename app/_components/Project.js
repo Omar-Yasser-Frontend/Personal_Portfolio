@@ -1,14 +1,15 @@
 import Image from "next/image";
 import { Fragment } from "react";
 
+const toolsColor = {
+  "React.js": "text-cyan-400 text-shadw-cyan-400",
+  "Node.js": "text-green-400 text-shadw-green-400",
+  "Next.js": "text-gray-400 text-shadw-gray-400",
+  Mongodb: "text-green-800 text-shadw-green-800",
+  "Express.js": "text-white text-shadw-white",
+};
+
 function Project({ title, description, imgPath, tools, importantTools }) {
-  const toolsColor = {
-    "React.js": "text-cyan-400 text-shadw-cyan-400",
-    "Node.js": "text-green-400 text-shadw-green-400",
-    "Next.js": "text-gray-400 text-shadw-gray-400",
-    Mongodb: "text-green-800 text-shadw-green-800",
-    "Express.js": "text-white text-shadw-white",
-  };
   return (
     <article className="my-8 block rounded-md shadow-md">
       <a

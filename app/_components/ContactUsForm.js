@@ -30,16 +30,6 @@ export default function ContactUsForm() {
               "Failed to send email, please try again later or reach us using whatsapp",
           },
         );
-
-        // try {
-        //   await sendMessage(data);
-        //   toast.success("Email sent successfully, thanks for reaching me");
-        //   reset();
-        // } catch (e) {
-        //   toast.error(
-        //     "Failed to send email, please try again or reach us using whatsapp",
-        //   );
-        // }
       })}
     >
       <input
