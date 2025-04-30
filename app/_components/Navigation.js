@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion, PresenceContext } from "motion/react";
 import { GrMenu } from "react-icons/gr";
 import ContactModal from "./ContactModal";
@@ -9,11 +9,22 @@ function Navigation() {
   const [show, setShow] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const close = () => setShowModal(false);
+
+  useEffect(function () {
+    const closeDropdown = () => setShow(false);
+    window.addEventListener("click", closeDropdown);
+
+    return () => window.removeEventListener("click", closeDropdown);
+  }, []);
+
   return (
     <>
       <nav className="flex items-center">
         <GrMenu
-          onClick={() => setShow((show) => !show)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setShow((show) => !show);
+          }}
           size={30}
           className="cursor-pointer sm:hidden"
         />
