@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import img1 from "@/public/img1.jpg";
+import img1 from "@/public/img1.webp";
 import AboutAnimation from "./AboutAnimation";
 
 function AboutMePart1() {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profilePic from "@/public/me.png";
+import profilePic from "@/public/me.webp";
 
 function HeroImage() {
   return (

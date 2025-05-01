@@ -1,5 +1,5 @@
 import Image from "next/image";
-import img2 from "@/public/img2.jpg";
+import img2 from "@/public/img2.webp";
 import AboutAnimation from "./AboutAnimation";
 
 function AboutMePart2() {
