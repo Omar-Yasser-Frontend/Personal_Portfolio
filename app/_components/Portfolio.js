@@ -7,6 +7,18 @@ import Project from "./Project";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
+const projects = [
+  {
+    imgPath: "/PomodoroTimer.webp",
+    projectUrl: "https://pomodoro-timer-hpdq.vercel.app/",
+    title: "Pomodoro Timer",
+    description:
+      "A fullstack Pomodoro timer app built as a personal challenge. Inspired by Pomofocus.io’s design, but fully rebuilt using React for the frontend and Express.js for the backend — including features like email confirmation and custom timer logic. Created for learning purposes only",
+    tools: "Full-stack",
+    importantTools: ["React.js", "Node.js", "Express.js", "Mongodb"],
+  },
+];
+
 function Portfolio() {
   return (
     <section id="portfolio">
@@ -29,16 +41,27 @@ function Portfolio() {
               prevEl: ".swiper-prev",
             }}
           >
-            {[...Array(6)].map((_, i) => (
-              <SwiperSlide key={i}>
-                <Project
-                  title={`Project ${i + 1}`}
-                  description={`Description for project ${i + 1}`}
-                  tools={"Front-end"}
-                  importantTools={["Express.js", "Mongodb", "Node.js"]}
-                />
-              </SwiperSlide>
-            ))}
+            {projects.map(
+              ({
+                title,
+                description,
+                tools,
+                importantTools,
+                imgPath,
+                projectUrl,
+              }) => (
+                <SwiperSlide key={description}>
+                  <Project
+                    title={title}
+                    description={description}
+                    tools={tools}
+                    imgPath={imgPath}
+                    projectUrl={projectUrl}
+                    importantTools={importantTools}
+                  />
+                </SwiperSlide>
+              ),
+            )}
           </Swiper>
           <button
             aria-label="scroll to previous project"

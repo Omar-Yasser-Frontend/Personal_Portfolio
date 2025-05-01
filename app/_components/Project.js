@@ -9,11 +9,18 @@ const toolsColor = {
   "Express.js": "text-white text-shadow-white",
 };
 
-function Project({ title, description, imgPath, tools, importantTools }) {
+function Project({
+  title,
+  description,
+  imgPath,
+  tools,
+  importantTools,
+  projectUrl,
+}) {
   return (
-    <article className="my-8 block rounded-md shadow-md">
+    <div className="my-8 block overflow-hidden rounded-md shadow-md">
       <a
-        href="https://youtube.com"
+        href={projectUrl || "/"}
         rel="noreferral noopener"
         className="block focus:rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
         aria-label={`View ${title} project details`}
@@ -64,7 +71,7 @@ function Project({ title, description, imgPath, tools, importantTools }) {
           </p>
         </div>
       </a>
-    </article>
+    </div>
   );
 }
 
