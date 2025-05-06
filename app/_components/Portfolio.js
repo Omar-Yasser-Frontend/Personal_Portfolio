@@ -13,7 +13,7 @@ const projects = [
     projectUrl: "https://pomodoro-timer-hpdq.vercel.app/",
     title: "Pomodoro Timer",
     description:
-      "A fullstack Pomodoro timer app built as a personal challenge. Inspired by Pomofocus.io’s design, but fully rebuilt using React for the frontend and Express.js for the backend — including features like email confirmation and custom timer logic. Created for learning purposes only",
+      "A fullstack Pomodoro timer for productivity and focus built It helps you manage your time and improve your productivity by breaking work into intervals, known as pomodoros.",
     tools: "Full-stack",
     importantTools: ["React.js", "Node.js", "Express.js", "Mongodb"],
   },
