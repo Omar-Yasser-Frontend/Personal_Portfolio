@@ -8,7 +8,7 @@ function ContactUs() {
       <div className="container mx-auto px-4">
         <ContactUsHeading />
 
-        <div className="border-secondary/20 mx-auto max-w-4xl rounded-2xl border bg-black/50 p-8 shadow-xl backdrop-blur-lg">
+        <div className="border-secondary/20 mx-auto max-w-4xl rounded-2xl border bg-black/50 p-4 shadow-xl backdrop-blur-lg sm:p-8">
           <ContactUsContent />
         </div>
       </div>

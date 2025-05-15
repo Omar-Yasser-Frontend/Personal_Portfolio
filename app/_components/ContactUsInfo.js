@@ -5,7 +5,7 @@ function ContactUsInfo() {
     <div className="space-y-6">
       <a
         href="mailto:craft14716@gmail.com"
-        className="bg-secondary/10 hover:bg-secondary/20 flex items-center gap-4 rounded-lg p-4 transition-colors"
+        className="bg-secondary/10 hover:bg-secondary/20 flex items-center gap-4 rounded-lg p-2 transition-colors sm:p-4"
       >
         <div className="bg-secondary/20 flex h-12 w-12 items-center justify-center rounded-full">
           <FaEnvelope className="text-secondary text-xl" />
@@ -18,7 +18,7 @@ function ContactUsInfo() {
 
       <a
         href="https://wa.me/201064142795?text=Hello%20Omar%2C%20I%20want%20to%20contact%20you%20for%20a%20project"
-        className="bg-secondary/10 hover:bg-secondary/20 flex items-center gap-4 rounded-lg p-4 transition-colors"
+        className="bg-secondary/10 hover:bg-secondary/20 flex items-center gap-4 rounded-lg p-2 transition-colors sm:p-4"
       >
         <div className="bg-secondary/20 flex h-12 w-12 items-center justify-center rounded-full">
           <FaPhone className="text-secondary text-xl" />
