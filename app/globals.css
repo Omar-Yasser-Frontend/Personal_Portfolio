@@ -153,9 +153,9 @@ header nav ul li:not(:last-child, :nth-child(5), :nth-child(6)) a {
   /* @apply rounded-tl-md rounded-bl-md; */
 }
 
-.btn-secondary:hover::before {
+/* .btn-secondary:hover::before {
   top: 0;
-}
+} */
 
 .btn-secondary::after {
   content: "";
@@ -170,9 +170,9 @@ header nav ul li:not(:last-child, :nth-child(5), :nth-child(6)) a {
   /* @apply rounded-tr-md rounded-br-md; */
 }
 
-.btn-secondary:hover::after {
+/* .btn-secondary:hover::after {
   bottom: 0;
-}
+} */
 /* _______________________________________________ */
 
 .text-drop-parent span span {
@@ -240,7 +240,7 @@ header nav ul li:not(:last-child, :nth-child(5), :nth-child(6)) a {
 .content-head {
   position: relative;
 
-  @apply mb-8 text-center text-3xl font-bold;
+  @apply mb-16 text-center text-3xl font-bold;
 }
 
 .content-head::before {
@@ -326,3 +326,12 @@ header nav ul li:not(:last-child, :nth-child(5), :nth-child(6)) a {
 .contact:hover::after {
   right: 2px;
 } */
+
+.circle {
+  transition:
+    top 0ms,
+    left 0ms,
+    width 0.5s linear,
+    height 0.5s linear;
+  /* all 500ms 0ms; */
+}

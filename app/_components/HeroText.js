@@ -4,6 +4,7 @@ import { useState } from "react";
 import ContactModalHandler from "./ContactModalHandler";
 import HeroSocialMedia from "./HeroSocialMedia";
 import TypingAnimation from "./TypingAnimation";
+import HoverBtn from "./HoverBtn";
 
 const typingPhrases = [
   "Passionate Front-End Developer",
@@ -19,6 +20,11 @@ const typingPhrases = [
 function HeroText() {
   const [showModal, setShowModal] = useState(false);
   const close = () => setShowModal(false);
+
+  function handleClick(e) {
+    e.stopPropagation();
+    setShowModal((show) => !show);
+  }
 
   return (
     <>
@@ -40,22 +46,24 @@ function HeroText() {
         </p>
 
         <div className="mt-8 flex justify-center lg:justify-start">
-          <a
+          {/* <a
             href="#about-me"
             className="bg-secondary btn-style relative mr-5 rounded-md px-8 py-3 font-semibold"
           >
             <span className="relative z-10">About Me</span>
-          </a>
+          </a> */}
 
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setShowModal((show) => !show);
-            }}
-            className="btn-secondary relative block cursor-pointer overflow-hidden rounded-md border-2 border-white bg-transparent px-8 py-3 font-semibold"
+          <HoverBtn
+            to={"#about-me"}
+            className="bg-secondary border-secondary relative mr-5 rounded-md px-8 py-3 font-semibold"
+            fillColor="bg-background"
           >
-            <span className="relative z-10">Contact Me</span>
-          </button>
+            About Me
+          </HoverBtn>
+
+          <HoverBtn onClick={handleClick} className="cursor-pointer">
+            Contact Me
+          </HoverBtn>
         </div>
         <HeroSocialMedia />
       </div>

@@ -82,7 +82,7 @@ export default function ParticlesBG({ className }) {
   if (init) {
     return (
       <Particles
-        className={`${className} hidden lg:block`}
+        className={className}
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}

@@ -10,10 +10,21 @@ import { IoIosArrowForward } from "react-icons/io";
 const projects = [
   {
     imgPath: "/PomodoroTimer.webp",
+    githubRepo: "https://github.com/Omar-Yasser-Frontend/Pomodoro_Timer",
     projectUrl: "https://pomodoro-timer-hpdq.vercel.app/",
     title: "Pomodoro Timer",
     description:
       "A fullstack Pomodoro timer for productivity and focus built It helps you manage your time and improve your productivity by breaking work into intervals, known as pomodoros.",
+    tools: "Full-stack",
+    importantTools: ["React.js", "Node.js", "Express.js", "Mongodb"],
+  },
+  {
+    imgPath: "/style-store.png",
+    githubRepo: "https://github.com/Omar-Yasser-Frontend/stye-store-e-commerce",
+    projectUrl: "https://style--store.vercel.app",
+    title: "Style Store",
+    description:
+      "personal project Full-stack e-commerce platform built with MERN stack. Features user authentication, product management, secure payments with Stripe, and a responsive design for seamless shopping experience",
     tools: "Full-stack",
     importantTools: ["React.js", "Node.js", "Express.js", "Mongodb"],
   },
@@ -49,11 +60,13 @@ function Portfolio() {
                 importantTools,
                 imgPath,
                 projectUrl,
+                githubRepo
               }) => (
                 <SwiperSlide key={description}>
                   <Project
                     title={title}
                     description={description}
+                    githubRepo={githubRepo}
                     tools={tools}
                     imgPath={imgPath}
                     projectUrl={projectUrl}
