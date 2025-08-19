@@ -28,6 +28,16 @@ const projects = [
     tools: "Full-stack",
     importantTools: ["React.js", "Node.js", "Express.js", "Mongodb"],
   },
+  {
+    imgPath: "/Country-page-master.png",
+    githubRepo: "https://github.com/Omar-Yasser-Frontend/country-page-master",
+    projectUrl: "https://country-page-master.vercel.app",
+    title: "Country Page Master",
+    description:
+      "Country Page master show all countries with information about every country population, currency, languages and more",
+    tools: "Front-End",
+    importantTools: ["React.js", "Next.js"],
+  },
 ];
 
 function Portfolio() {
