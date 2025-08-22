@@ -32,7 +32,7 @@ const skillsList = [
   {
     imgPath: "/nextjs.png",
     title: "Next.JS",
-    level: "Intermediate",
+    level: "Advanced",
     description:
       "Building SSR and SSG applications, routing, basic API routes.",
   },
@@ -46,21 +46,21 @@ const skillsList = [
   {
     imgPath: "/nodejs.png",
     title: "Node.JS",
-    level: "Intermediate",
+    level: "Advanced",
     description:
       "Building simple backend services, REST APIs, and middleware handling.",
   },
   {
     imgPath: "/express.png",
     title: "Express.JS",
-    level: "Intermediate",
+    level: "Advanced",
     description:
       "Creating REST APIs, middleware, and handling routing and errors.",
   },
   {
     imgPath: "/mongodb.png",
     title: "MongoDB",
-    level: "Intermediate",
+    level: "Advanced",
     description:
       "Working with schemas, models, basic queries, and Mongoose integration.",
   },
