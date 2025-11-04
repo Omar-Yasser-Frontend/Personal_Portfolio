@@ -30,7 +30,7 @@ function HeroText() {
       <div className="mt-[60px] text-center lg:text-left">
         <h1 className="text-xl">Welcome, I&apos;m Omar Yasser</h1>
 
-        <p className="mx-auto mt-4 mb-4 h-[80px] max-w-90 text-2xl font-bold sm:text-4xl lg:mx-0">
+        <p className="mx-auto mt-4 mb-4 max-w-90 text-2xl font-bold sm:text-4xl lg:mx-0">
           <TypingAnimation
             typingPhrases={[
               "Full-Stack(MERN) Developer",
@@ -41,7 +41,7 @@ function HeroText() {
           />
         </p>
         <div className="hidden h-0.5 w-[100px] bg-amber-300 lg:block"></div>
-        <p className="mx-auto mt-4 h-[64px] max-w-90 text-xl font-bold sm:text-2xl lg:mx-0">
+        <p className="mx-auto mt-4 max-w-90 text-xl font-bold sm:text-2xl lg:mx-0">
           <TypingAnimation typingPhrases={typingPhrases} />
         </p>
 
