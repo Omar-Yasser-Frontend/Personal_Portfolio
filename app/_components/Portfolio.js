@@ -9,12 +9,12 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const projects = [
   {
-    imgPath: "/PomodoroTimer.webp",
-    githubRepo: "https://github.com/Omar-Yasser-Frontend/Pomodoro_Timer",
-    projectUrl: "https://pomodoro-timer-hpdq.vercel.app/",
-    title: "Pomodoro Timer",
+    imgPath: "/Hotel-Booking.png",
+    githubRepo: "https://github.com/Omar-Yasser-Frontend/Booking-Hotel",
+    projectUrl: "https://booking-hotel-o143.vercel.app/",
+    title: "Hotel Booking",
     description:
-      "A fullstack Pomodoro timer for productivity and focus built It helps you manage your time and improve your productivity by breaking work into intervals, known as pomodoros.",
+      "A fullstack Booking application demo built with MERN stack full featured with payment, responsive and authentication",
     tools: "Full-stack",
     importantTools: ["React.js", "Node.js", "Express.js", "Mongodb"],
   },
@@ -70,7 +70,7 @@ function Portfolio() {
                 importantTools,
                 imgPath,
                 projectUrl,
-                githubRepo
+                githubRepo,
               }) => (
                 <SwiperSlide key={description}>
                   <Project

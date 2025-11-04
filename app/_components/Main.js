@@ -12,7 +12,6 @@ function Main() {
       <AboutMe />
       <Skills />
       <Portfolio />
-      {/* <BonusProjects /> */}
       <ContactUs />
     </main>
   );

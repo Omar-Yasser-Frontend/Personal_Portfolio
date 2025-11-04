@@ -10,7 +10,7 @@ function AboutAnimation({ children, direction }) {
         translateX: direction === "left" ? "-30px" : "30px",
       }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ amount: 0.5 }}
+      viewport={{ amount: 0.5, once: true }}
       whileInView={{ opacity: 1, translateX: "0px" }}
     >
       {children}

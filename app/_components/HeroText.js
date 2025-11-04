@@ -7,11 +7,10 @@ import TypingAnimation from "./TypingAnimation";
 import HoverBtn from "./HoverBtn";
 
 const typingPhrases = [
-  "Passionate Front-End Developer",
+  "Passionate Full-Stack Developer",
+  "Javascript technology Enthusiast",
   "Building Interactive Web Experiences",
-  "Hands-On Back-End Development",
-  "Transforming Ideas into Digital Solutions",
-  "JavaScript, React, Node.js Enthusiast",
+  "Transforming Ideas into Website",
   "Crafting Beautiful, Functional Websites",
   "Clean, Scalable Code for the Modern Web",
   "Bringing Designs to Life with Code",
@@ -34,9 +33,10 @@ function HeroText() {
         <p className="mx-auto mt-4 mb-4 h-[80px] max-w-90 text-2xl font-bold sm:text-4xl lg:mx-0">
           <TypingAnimation
             typingPhrases={[
-              "Front-End Developer",
-              "Learning Node.js for Back-End",
-              "Building Full-Stack Applications",
+              "Full-Stack(MERN) Developer",
+              "Using javascript technologies",
+              "Building Full-Stack Applications with modern technologies",
+              "Transforming your ideas into website",
             ]}
           />
         </p>
